@@ -237,6 +237,9 @@ img {
 .mob-link:focus {
   color: #404bbf;
 }
+.mob-link.current {
+  color: #404bbf;
+}
 .mob-address-list {
   display: flex;
   flex-direction: column;
@@ -257,12 +260,15 @@ img {
 .mob-address-link:focus {
   color: #4d5ae5;
 }
+.mob-address-link.current {
+  color: #404bbf;
+}
 .icon-list-mob {
   display: flex;
   gap: 40px;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 .icon-link-mob {
   width: 40px;
@@ -283,7 +289,7 @@ img {
 /* ----------------  HERO  -------------- */
 .hero {
   background: #2e2f42;
-  padding: 72px 52px;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -303,7 +309,7 @@ img {
   text-align: center;
   color: #fff;
   max-width: 216px;
-  margin: 0 auto 48px;
+  margin: 0 auto 72px;
 }
 .hero-button {
   color: #fff;
@@ -333,35 +339,55 @@ img {
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hero {
-    background-image: url(../images/1x-2x/Dark-hero-mobile-bg-2x.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/1x-2x/Dark-hero-mobile-bg-2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url(../images/1x-2x/Dark-hero-tablet-bg-1x.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/1x-2x/Dark-hero-tablet-bg-1x.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
   (min-resolution: 192dpi) and (min-width: 768px) {
   .hero {
-    background-image: url(../images/1x-2x/Dark-hero-tablet-bg-2x.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/1x-2x/Dark-hero-tablet-bg-2x.jpg);
   }
 }
 @media screen and (min-width: 1158px) {
   .hero {
-    background-image: url(../images/1x-2x/Dark-hero-fullsize-bg-1x.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/1x-2x/Dark-hero-fullsize-bg-1x.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
   (min-resolution: 192dpi) and (min-width: 1158px) {
   .hero {
-    background-image: url(../images/1x-2x/Dark-hero-fullsize-bg-2x.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/1x-2x/Dark-hero-fullsize-bg-2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 112px 136px;
+    padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -373,9 +399,7 @@ img {
     font-size: 56px;
     line-height: 1.07;
     max-width: 496px;
-  }
-  .hero > .container {
-    padding: 0;
+    margin: 0 auto 36px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -392,13 +416,14 @@ img {
   .hero-title {
     font-size: 56px;
     line-height: 1.07;
+    margin: 0 auto 48px;
   }
 }
 /* ----------------  HERO  -------------- */
 
 /* ----------------  ADVANTAGES  -------------- */
 .advantages {
-  padding: 96px 16px;
+  padding: 96px 0;
 }
 .advantages-subtitle {
   font-weight: 700;
@@ -411,6 +436,7 @@ img {
 .advantages-item-title {
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-weight: 500;
 }
 .features-icon-field {
   display: none;
@@ -432,9 +458,6 @@ img {
 .advantages-list {
   display: block;
 }
-.advantages > .container {
-  padding: 0;
-}
 .advantages-item:not(:last-child) {
   margin-bottom: 72px;
 }
@@ -442,6 +465,9 @@ img {
   margin-bottom: 8px;
 }
 @media only screen and (min-width: 768px) {
+  .advantages-subtitle {
+    text-align: left;
+  }
   .advantages-list {
     display: flex;
     flex-direction: row;
@@ -454,14 +480,10 @@ img {
   .advantages-item:not(:last-child) {
     margin-bottom: 0;
   }
-  .advantages-item-title {
-    font-weight: 500;
-    line-height: 1.5;
-  }
 }
 @media only screen and (min-width: 1158px) {
   .advantages {
-    padding: 120px 156px;
+    padding: 120px 0;
   }
   .advantages-list {
     display: flex;
@@ -498,10 +520,7 @@ img {
 /* ----------------  OUR TEAM  -------------- */
 .team {
   background-color: #f4f4fd;
-  padding: 96px 28px;
-}
-.team > .container {
-  padding: 0;
+  padding: 96px 0;
 }
 .team-title {
   font-weight: 700;
@@ -521,9 +540,6 @@ img {
   text-align: center;
   color: #2e2f42;
   margin-bottom: 8px;
-}
-.team-list {
-  display: block;
 }
 .team-list-item {
   background-color: #ffffff;
@@ -578,7 +594,7 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .team {
-    padding: 96px 108px;
+    padding: 96px 0;
   }
   .team-list {
     display: flex;
@@ -591,8 +607,8 @@ img {
     margin-bottom: 0;
   }
   .team-list-item {
-    background-color: #ffffff;
     width: calc((100% - 24px) / 2);
+    margin: 0;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -607,7 +623,7 @@ img {
 
 /* ----------------  PORTFOLIO  -------------- */
 .portfolio {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 .portfolio-title {
   font-weight: 700;
@@ -623,8 +639,9 @@ img {
   display: block;
 }
 .portfolio-item {
-  min-width: 288px;
+  width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .portfolio-item:not(:last-child) {
   margin-bottom: 48px;
@@ -684,7 +701,7 @@ img {
   }
   .portfolio-item {
     /* width: 356px; */
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 24px) / 2);
   }
   .portfolio-item:not(:last-child) {
     margin-bottom: 0;
@@ -700,6 +717,7 @@ img {
   .portfolio-item {
     /* width: 360px; */
     width: calc((100% - 72px) / 3);
+    box-shadow: none;
   }
 }
 /* ----------------  PORTFOLIO  -------------- */
@@ -853,6 +871,9 @@ img {
   .social,
   .subscribe-email {
     margin-bottom: 0;
+  }
+  .subscribe-email {
+    width: 264px;
   }
   .footer {
     padding: 96px 93px;
@@ -1088,7 +1109,7 @@ img {
   /* fill: #404bbf; */
 }
 
-.privacy-link {
+.policy-link {
   flex-shrink: 0;
   color: #4d5ae5;
   text-decoration: underline;
